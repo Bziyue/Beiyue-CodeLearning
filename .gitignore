@@ -19,6 +19,9 @@
 # Fortran module files
 *.mod
 *.smod
+# Build directory
+bin/
+build/
 
 # Compiled Static libraries
 *.lai
@@ -30,3 +33,7 @@
 *.exe
 *.out
 *.app
+
+# 忽略 VS Code 相关的本地或临时文件 (如果需要)
+.vscode/*.log
+.vscode/ipch/
