@@ -17,7 +17,7 @@
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
+                    "ignoreFailures": false
                 }
             ],
             "preLaunchTask": "Build C++ file" // 在启动调试前执行的任务（必须与 tasks.json 中的 label 匹配）
