@@ -1,8 +1,8 @@
 {
     "code-runner.executorMap": {
-        "cpp": "cd ~/Beiyue-CodeLearning && CPP_SOURCE_FILE_FULL_PATH=\"$fullFileName\" && CPP_SOURCE_DIR=\"$dir\" && CPP_EXE_NAME=\"$fileNameWithoutExt\" && CPP_REL_SOURCE_DIR=$(realpath --relative-to=./src \"$CPP_SOURCE_DIR\") && CPP_TARGET_BIN_DIR=\"./bin/src/$CPP_REL_SOURCE_DIR\" && CPP_TARGET_EXE_PATH=\"$CPP_TARGET_BIN_DIR/$CPP_EXE_NAME\" && mkdir -p \"$CPP_TARGET_BIN_DIR\" && g++ -std=c++17 -Wall \"$CPP_SOURCE_FILE_FULL_PATH\" -o \"$CPP_TARGET_EXE_PATH\" && \"$CPP_TARGET_EXE_PATH\""
+        "cpp": "cd ~/Beiyue-CodeLearning && CPP_SOURCE_FILE_FULL_PATH=\"$fullFileName\" && CPP_SOURCE_DIR=\"$dir\" && CPP_EXE_NAME=\"$fileNameWithoutExt\" && CPP_REL_SOURCE_DIR=$(realpath --relative-to=./src \"$CPP_SOURCE_DIR\") && CPP_TARGET_BIN_DIR=\"./bin/src/$CPP_REL_SOURCE_DIR\" && CPP_TARGET_EXE_PATH=\"$CPP_TARGET_BIN_DIR/$CPP_EXE_NAME\" && mkdir -p \"$CPP_TARGET_BIN_DIR\" && g++ -std=c++11 -Wall \"$CPP_SOURCE_FILE_FULL_PATH\" -o \"$CPP_TARGET_EXE_PATH\" && \"$CPP_TARGET_EXE_PATH\""
         // 如果有其他仅用于此工作区的设置，也可以加在这里
     },
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
     // 如果此文件已存在其他设置，请确保 JSON 格式正确（逗号分隔等）
 }
