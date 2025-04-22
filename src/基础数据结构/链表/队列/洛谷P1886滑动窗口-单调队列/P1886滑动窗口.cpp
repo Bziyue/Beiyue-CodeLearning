@@ -58,9 +58,9 @@ int main()
             }
         }
         // 比较窗口k元素和最小最大值
-        if (arr[window[k] + i] < arr[min_num_idx])
+        if (arr[window[k] + i] <= arr[min_num_idx]) //同样是尽可能将指针后靠，避免离开窗口
             min_num_idx = window[k] + i;
-        if (arr[window[k] + i] > arr[max_num_idx])
+        if (arr[window[k] + i] >= arr[max_num_idx])
             max_num_idx = window[k] + i;
 
         min_arr.push_back(arr[min_num_idx]);
