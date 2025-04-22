@@ -4,5 +4,8 @@
         // 如果有其他仅用于此工作区的设置，也可以加在这里
     },
     "code-runner.runInTerminal": true,
+    "files.associations": {
+        "limits": "cpp"
+    },
     // 如果此文件已存在其他设置，请确保 JSON 格式正确（逗号分隔等）
 }

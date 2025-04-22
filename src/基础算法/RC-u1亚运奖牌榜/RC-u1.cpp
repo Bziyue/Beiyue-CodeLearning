@@ -27,4 +27,5 @@ int main()
     cout<<countrys[1].scores[1]<<" "<<countrys[1].scores[2]<<" "<<countrys[1].scores[3]<<'\n';
     cout<<(first_win ? s1 : s2)<<endl;
     
+    return 0;
 }
