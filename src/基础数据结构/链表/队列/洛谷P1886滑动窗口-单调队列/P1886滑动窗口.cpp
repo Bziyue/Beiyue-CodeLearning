@@ -17,6 +17,8 @@ int main()
     int min_num_idx = 0;
     int max_num_idx = 0;
     vector<ll> min_arr, max_arr;
+    min_arr.reserve(n - k + 5);
+    max_arr.reserve(n - k + 5);
     // 定义长度为k的滑动窗口
     vector<int> window(k + 1);
     for (int i = 1; i <= k; i++)
@@ -35,9 +37,9 @@ int main()
 
             for (int j = 1; j <= k; j++) // 在窗口范围内寻找最大最小值 1 到 k
             {
-                if (arr[window[j] + i] <= min_num) //改为小于等于和大于等于，因为使用小于符号面对超大输入，并且输入全同会导致指针固定在窗口的起点
-                {                                                       //导致每次滑动窗口都会重新计算 
-                    min_num = arr[window[j] + i];    //并且如果有相同的最大值和最小值，这种方式也可以将idx尽可能的往后放，从而避免多次调用
+                if (arr[window[j] + i] <= min_num) // 改为小于等于和大于等于，因为使用小于符号面对超大输入，并且输入全同会导致指针固定在窗口的起点
+                {                                  // 导致每次滑动窗口都会重新计算
+                    min_num = arr[window[j] + i];  // 并且如果有相同的最大值和最小值，这种方式也可以将idx尽可能的往后放，从而避免多次调用
                     min_num_idx = window[j] + i;
                 }
             }
@@ -58,7 +60,7 @@ int main()
             }
         }
         // 比较窗口k元素和最小最大值
-        if (arr[window[k] + i] <= arr[min_num_idx]) //同样是尽可能将指针后靠，避免离开窗口
+        if (arr[window[k] + i] <= arr[min_num_idx]) // 同样是尽可能将指针后靠，避免离开窗口
             min_num_idx = window[k] + i;
         if (arr[window[k] + i] >= arr[max_num_idx])
             max_num_idx = window[k] + i;
@@ -67,10 +69,12 @@ int main()
         max_arr.push_back(arr[max_num_idx]);
     }
 
-    for(auto num:min_arr) cout<<num<<" ";
-    cout<<'\n';
-    for(auto num:max_arr) cout<<num<<" ";
-    cout<<endl;
+    for (auto num : min_arr)
+        cout << num << " ";
+    cout << '\n';
+    for (auto num : max_arr)
+        cout << num << " ";
+    cout << endl;
 
     return 0;
 }
