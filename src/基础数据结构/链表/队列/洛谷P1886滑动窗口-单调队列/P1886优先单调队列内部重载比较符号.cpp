@@ -8,7 +8,7 @@ struct data_idx
     int data;
     int idx;
     bool operator<(const data_idx &other) const// 重载小于符号，在less中自动调用
-    {
+    {                                                               //内部使用时，需要确保this的内容也不便，所以加上const修饰符
         if (this->data < other.data)
             return true;
         else

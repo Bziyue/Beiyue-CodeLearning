@@ -10,12 +10,12 @@ struct data_idx{
     int data;
     int idx;
 };
-bool operator<(data_idx data_idx1 , data_idx data_idx2) //重载小于符号，在less中自动调用
-{
+bool operator<(const data_idx& data_idx1 ,const data_idx& data_idx2) //重载小于符号，在less中自动调用
+{                                                                                               //如果不是传值，而是传递引用，那么需要加上const修饰符，因为在stl的实现内部要求使用const
     if(data_idx1.data < data_idx2.data) return true;
     else return false;
 }
-bool operator>(data_idx data_idx1 , data_idx data_idx2) // 重载大于符号，在greater中自动调用
+bool operator>(const data_idx& data_idx1 ,const  data_idx& data_idx2) // 重载大于符号，在greater中自动调用
 {
     if(data_idx1.data > data_idx2.data) return true;
     else return false;
