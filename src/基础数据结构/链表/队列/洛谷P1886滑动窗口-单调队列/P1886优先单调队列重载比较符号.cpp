@@ -12,7 +12,7 @@ struct data_idx{
 };
 bool operator<(const data_idx& data_idx1 ,const data_idx& data_idx2) //重载小于符号，在less中自动调用
 {                                                                                               //如果不是传值，而是传递引用，那么需要加上const修饰符，因为在stl的实现内部要求使用const
-    if(data_idx1.data < data_idx2.data) return true;
+    if(data_idx1.data < data_idx2.data) return true;                    //在STL实现内部，greater less内部使用比较符号等不改变值的操作时，重载比较函数并传入引用时，需要加上const修饰符，表明重载的函数不会改变传入的值；如果时结构体或对象内部的函数，要在大括号前加上const修饰符。
     else return false;
 }
 bool operator>(const data_idx& data_idx1 ,const  data_idx& data_idx2) // 重载大于符号，在greater中自动调用
