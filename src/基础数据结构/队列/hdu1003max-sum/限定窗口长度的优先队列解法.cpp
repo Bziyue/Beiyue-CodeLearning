@@ -23,7 +23,7 @@ int main()
     for(int i = 1; i <= n; i++)
     {
         //删去队首超过窗口范围的下标
-        while(!pq.empty() && pq.top() < i - m) pq.pop();
+        while(!pq.empty() && pq.top() < i - m) pq.pop();     //优先队列的做法有问题，会使得不在top的但不在窗口内的元素无法被移除，从而导致优先队列的排序出错，可能使得应该在top的元素不在top
         if(pq.empty())
         {
             ans = max(ans,prefix[i]); //如果队列为空了，以当前元素作为窗口的有效元素
