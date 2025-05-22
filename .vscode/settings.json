@@ -6,7 +6,9 @@
     "code-runner.runInTerminal": true,
     "files.associations": {
         "limits": "cpp",
-        "compare": "cpp"
+        "compare": "cpp",
+        "random": "cpp",
+        "iostream": "cpp"
     },
     // 如果此文件已存在其他设置，请确保 JSON 格式正确（逗号分隔等）
 }
