@@ -30,7 +30,13 @@
         "stack": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp",
+        "memory": "cpp",
+        "sstream": "cpp",
+        "valarray": "cpp"
     },
     // 如果此文件已存在其他设置，请确保 JSON 格式正确（逗号分隔等）
 }
