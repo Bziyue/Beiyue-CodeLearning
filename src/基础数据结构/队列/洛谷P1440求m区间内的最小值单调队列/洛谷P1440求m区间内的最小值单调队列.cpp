@@ -12,7 +12,7 @@ int main()
     {
 
         //去除超过窗口范围的元素
-        while(!dq.empty() && dq.front() < i - m) dq.pop_front();
+        while(!dq.empty() && dq.front() < i - m) dq.pop_front(); //由于窗口不包含 i 所有是i -k , i 在窗口前一个（从左到右）
 
         if(dq.empty()) cout<<0<<endl;
         else

@@ -11,7 +11,7 @@ int main()
 
     for(int i = 1; i <= n; i++)
     {
-        while(!dq.empty() && dq.front() <= i -k ) dq.pop_front();
+        while(!dq.empty() && dq.front() <= i -k ) dq.pop_front();//i - k得到的是靠近窗口的第一个元素
 
         //注意和1440的区别 输出窗口内，包含arr[i] 1440是arr[i] 之前 所有这里先入队再输出
 
