@@ -6,7 +6,7 @@
             "label": "Build C++ file",
             "type": "shell", // 明确使用 shell
             // 将整个命令放在 command 字段中，使用单引号保护路径变量，防止空格等问题
-            "command": "mkdir -p '${workspaceFolder}/bin/${relativeFileDirname}' && g++ -std=c++11 -Wall -g '${file}' -o '${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}'",
+            "command": "mkdir -p '${workspaceFolder}/bin/${relativeFileDirname}' && g++ -std=c++17 -Wall -g '${file}' -o '${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}'",
             "args": [], // 当 command 包含完整命令时，args 通常为空
             "options": {
                 "cwd": "${workspaceFolder}"

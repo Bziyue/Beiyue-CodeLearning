@@ -21,7 +21,19 @@ public:
             vec_p[int(ch- 'a') ]++;
         }
 
-        auto hash_of_p = hash_of_vec(vec_p);
+        //lambda匿名函数
+        auto vecHash = [fn = hash<int>{}](const vector<int>& vec) ->size_t
+        {
+            size_t seed = vec.size();
+            for(auto i:vec)
+            {
+                seed ^= fn(i) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+            }
+
+            return seed;
+        };
+
+        auto hash_of_p = vecHash(vec_p);
 
         vector<int> vec_sub(26,0);
         vector<int> result;
@@ -32,7 +44,7 @@ public:
         {
             //统计当前字串的字符分布
             vec_sub[int(s[right] - 'a')]++;
-            auto hash_of_sub = hash_of_vec(vec_sub);
+            auto hash_of_sub = vecHash(vec_sub);
 
             if(right - left + 1 == num_p)
             {
